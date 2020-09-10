@@ -1,0 +1,71 @@
+.content{
+    display: flex;
+}
+
+.mainbody{
+    width:90%;
+    background-color: rgb(26, 54, 65);
+    height: 2000px;
+    margin-top: -2px;
+
+}
+
+.cardContainer{
+    display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+}
+
+.card{
+    display: flex;
+          flex-direction: column;
+          width: 300px;
+          height: 400px;
+          background: transparent;
+          align-items: center;
+          margin-left: 4px;
+          margin-right: 3px;
+          margin-bottom: 1px;
+          padding: 5px;
+}
+
+.poster{
+    padding-top: 20px;
+}
+
+.name{
+    font-size: 22px;
+    font-weight: 200;
+    color: rgb(241, 238, 238);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.movietype{
+    font-size: 20px;
+    
+    color: rgb(235, 226, 226);
+    font-family:'Times New Roman', Times, serif; 
+}
+
+
+.rating{
+            font-size: 20px;
+            background: rgb(224, 186, 15);
+            color: rgb(247, 247, 247);
+            position: absolute;
+            padding: 8px;
+            border-radius: 20px;
+            width: 35px;
+            
+            
+}
+
+.mainbody p{
+    color: rgb(236, 243, 236);
+    margin-left: 100px;
+    margin-bottom: 100px;
+    margin-top: 40px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 50px;
+    color: silver;
+}

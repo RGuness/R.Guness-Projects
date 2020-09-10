@@ -1,0 +1,29 @@
+.topnav{
+    height: 100%;
+    width: 250px;
+    background-color: rgb(26, 24, 24);
+}
+
+.topnav a {
+    padding: 40px 10px 20px 50px;
+    text-decoration: none;
+    font-size: 17px;
+    color: #eee7e7;
+    display: block;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+  a:active{
+    background-color: rgb(34, 36, 56);
+        
+}
+.topnav a:hover {
+    color: #d82f2f;
+    cursor: pointer;
+    padding-right: 2px;
+    
+  }
+
+  .topnav a:after {
+    opacity: 5;
+    right: 0px;
+  }
