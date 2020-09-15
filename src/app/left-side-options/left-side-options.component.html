@@ -4,7 +4,21 @@
     <a [class.selected]="nameSelected == 'Coming Soon'" href="#" (click)="chosen('Coming Soon')">Coming Soon</a>
     <a [class.selected]="nameSelected == 'Favourites'" href="#" (click)="chosen('Favourites')">Favourites</a>
     <a [class.selected]="nameSelected == 'Watch Later'" href="#" (click)="chosen('Watch Later')">Watch Later</a><hr>
+
+
+    <div class="dropdown">
+        <button class="dropbtn">Choose Film Genre</button>
+        <div class="dropdown-content">
+          <a [class.selected]="nameSelected == 'Crime'" href="#" (click)="chosen('Crime')">Crime</a>
+          <a [class.selected]="nameSelected == 'Drama'" href="#" (click)="chosen('Drama')">Drama</a>
+          <a [class.selected]="nameSelected == 'Action'" href="#" (click)="chosen('Action')">Action</a>
+          <a [class.selected]="nameSelected == 'Biography'" href="#" (click)="chosen('Biography')">Biography</a>
+        </div>
+      </div>
 </div>
+
+
+
 
     
      

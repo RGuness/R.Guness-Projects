@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ReadjsonService } from '../readjson.service';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-body',
@@ -11,9 +13,16 @@ export class BodyComponent implements OnInit {
 
   listNewReleases: any[];
 
-  constructor() { }
+  movielist:any ;
+
+  constructor(private http : HttpClient) {
+    
+   }
 
   ngOnInit(): void {
+    this.http.get("./assets/movies.json")
+       .subscribe((data) => this.displaydata(data));
+
 
     this.listNewReleases =
       [{id: 0, name: 'The Wailing', rating: 7.9, poster: "/assets/images/thewailing.jfif", movietype: 'Mysterey,Thriller'},
@@ -31,5 +40,13 @@ export class BodyComponent implements OnInit {
 
   showSelected(newMenu: string) {
     this.selectedName = newMenu;
+    console.log(this.movielist.length);
+
+    this.movielist=this.movielist.filter(movie => {return (movie.movietype.toLowerCase().contains(newMenu.toLowerCase()))});
+    console.log(this.movielist.length);
+  }
+
+  displaydata(data){
+    this.movielist=data;
   }
 }

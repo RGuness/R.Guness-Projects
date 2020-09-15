@@ -5,8 +5,8 @@
 .mainbody{
     width:90%;
     background-color: rgb(26, 54, 65);
-    height: 2000px;
-    margin-top: -2px;
+    height: 4000px;
+    margin-top: 0px;
 
 }
 
@@ -32,6 +32,8 @@
 .poster{
     padding-top: 20px;
 }
+
+
 
 .name{
     font-size: 22px;

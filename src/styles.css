@@ -1,1 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: "Maax";
+    font-weight: 400;
+    font-style: normal;
+    src: local('Maax'),
+    url("./assets/Fonts/Maax.woff") format("woff");
+  }
+
+  @font-face {
+    font-family: "Caveat-Bold";
+    font-weight: 400;
+    font-style: normal;
+    src: local('Caveat-Bold'),
+    url("./assets/Fonts/Caveat-Bold.ttf") format("ttf");
+  }
+
+  

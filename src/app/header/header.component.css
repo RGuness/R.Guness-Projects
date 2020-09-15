@@ -9,6 +9,16 @@
     margin-top: 20px;
     position: absolute;
     left: 80px;
+    font-family: 'Maax', Arial, sans-serif;
+    
+}
+
+.searchbar{
+    left: 500px;
+    width: 200px;
+    color: skyblue;
+    position: absolute;
+    margin-top: 35px;
 }
 
 .popup{

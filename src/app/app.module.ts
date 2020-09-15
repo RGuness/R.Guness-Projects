@@ -6,6 +6,9 @@ import { HeaderComponent } from './header/header.component';
 import { BodyComponent } from './body/body.component';
 import { LeftSideOptionsComponent } from './left-side-options/left-side-options.component';
 import { PopUpComponent } from './pop-up/pop-up.component';
+import { SearchbarComponent } from './searchbar/searchbar.component';
+import {HttpClientModule} from '@angular/common/http' ;
+import {ReadjsonService} from '../app/readjson.service'
 
 @NgModule({
   declarations: [
@@ -13,10 +16,12 @@ import { PopUpComponent } from './pop-up/pop-up.component';
     HeaderComponent,
     BodyComponent,
     LeftSideOptionsComponent,
-    PopUpComponent
+    PopUpComponent,
+    SearchbarComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule  
   ],
   providers: [],
   bootstrap: [AppComponent]

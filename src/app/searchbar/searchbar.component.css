@@ -1,0 +1,25 @@
+*{
+margin :0px;
+padding :0px;
+font-family: sans-serif;
+}
+
+.searchbody{
+    position: absolute;
+    left:130%;
+    transform: translate(-60%,-50% );
+}
+
+input{
+    border: 3px solid rgb(235, 84, 73);
+    height: 63px;
+    width: 800px;
+    background: rgb(235, 84, 73);
+    font-size: 20px;
+    border-radius: 5px;
+    color: rgb(246, 245, 247);
+}
+::placeholder { 
+    color: rgb(226, 219, 219);
+    
+  }
