@@ -8,7 +8,7 @@ import { LeftSideOptionsComponent } from './left-side-options/left-side-options.
 import { PopUpComponent } from './pop-up/pop-up.component';
 import { SearchbarComponent } from './searchbar/searchbar.component';
 import {HttpClientModule} from '@angular/common/http' ;
-import {ReadjsonService} from '../app/readjson.service'
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -21,6 +21,7 @@ import {ReadjsonService} from '../app/readjson.service'
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     HttpClientModule  
   ],
   providers: [],

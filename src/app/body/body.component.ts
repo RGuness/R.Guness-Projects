@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Input } from '@angular/core';
 import { ReadjsonService } from '../readjson.service';
 import { HttpClient } from '@angular/common/http';
 
@@ -10,8 +10,14 @@ import { HttpClient } from '@angular/common/http';
 export class BodyComponent implements OnInit {
 
   selectedName: string = "";
+  searchselected:string=" ";
+
+  @Input('searchValue') searchValue: string;
+
+  @Input('searchValue2') searchValue2: string;
 
   listNewReleases: any[];
+  filteredList:any [];
 
   movielist:any ;
 
@@ -20,8 +26,8 @@ export class BodyComponent implements OnInit {
    }
 
   ngOnInit(): void {
-    this.http.get("./assets/movies.json")
-       .subscribe((data) => this.displaydata(data));
+    this.http.get("./assets/movies.json").subscribe((data) => this.displaydata(data));
+
 
 
     this.listNewReleases =
@@ -40,13 +46,24 @@ export class BodyComponent implements OnInit {
 
   showSelected(newMenu: string) {
     this.selectedName = newMenu;
-    console.log(this.movielist.length);
-
-    this.movielist=this.movielist.filter(movie => {return (movie.movietype.toLowerCase().contains(newMenu.toLowerCase()))});
-    console.log(this.movielist.length);
+   
+    this.filteredList = this.movielist.filter(movie => {
+      // console.log(movie);
+      return (movie.genres.includes(newMenu));
+    });
   }
 
   displaydata(data){
     this.movielist=data;
   }
+
+  searchdata(search){
+    this.searchValue2=search;
+
+    this.filteredList=this.movielist.filter(movie => {
+      return (movie.name.contains(search));
+    });
+
+  }
+
 }

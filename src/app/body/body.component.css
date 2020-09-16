@@ -5,9 +5,8 @@
 .mainbody{
     width:90%;
     background-color: rgb(26, 54, 65);
-    height: 4000px;
+    height: 7000px;
     margin-top: 0px;
-
 }
 
 .cardContainer{
@@ -33,8 +32,6 @@
     padding-top: 20px;
 }
 
-
-
 .name{
     font-size: 22px;
     font-weight: 200;
@@ -44,7 +41,6 @@
 
 .movietype{
     font-size: 20px;
-    
     color: rgb(235, 226, 226);
     font-family:'Times New Roman', Times, serif; 
 }
@@ -58,8 +54,7 @@
             padding: 8px;
             border-radius: 20px;
             width: 35px;
-            
-            
+         
 }
 
 .mainbody p{

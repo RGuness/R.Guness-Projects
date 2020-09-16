@@ -2,11 +2,12 @@
     <div class="popup" (click)="popUpToggle()"> </div>
     <p>MEDIA APP</p>
 
-    <div class="searchbar">  <app-searchbar></app-searchbar> </div>
+    <div class="searchbar">  
+        <app-searchbar (searchEvent)=getsearchterm($event)></app-searchbar>
+    </div>
 </div>
-
-
 
 <div *ngIf="popup == true"> 
     <app-pop-up [popUpStatus]=popup (newPopUpEvent)="popUpToggle()"></app-pop-up>
 </div>
+

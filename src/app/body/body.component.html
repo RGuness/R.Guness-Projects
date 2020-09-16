@@ -18,51 +18,33 @@
             </div>
 
 
-        <div class = "cardContainer" *ngIf="selectedName == 'Crime'">
-            <div class="card" *ngFor="let item of movielist">
-                <div class="card">
-                <div class="rating">{{ item.imdbRating }}</div>
-
-                <div class="poster">
-                    <img src={{item.posterurl}} width="250px" height="325px">
+            <div class="cardContainer">
+                <div class="card" *ngFor="let item of filteredList">
+                  <div class="card">
+                    <div class="rating">{{ item.imdbRating }}</div>
+                    <div class="poster">
+                      <img src={{item.posterurl}} width="250px" height="325px">
+                    </div>
+                    <div class="name">{{ item.title }}</div>
+                    <div class="movietype">{{ item.genres}}</div>
+                  </div>
                 </div>
-
-                <div class="name">{{ item.title }}</div>
-                <div class="movietype">{{ item.genres}}</div>
-              </div>
             </div>
-            
-        </div>
 
-
-        <div class = "cardContainer" *ngIf="selectedName == 'Drama'">
-            <div class="card" *ngFor="let item of movielist">
-                <div class="card">
-                <div class="rating">{{ item.imdbRating }}</div>
-
-                <div class="poster">
-                    <img src={{item.posterurl}} width="250px" height="325px">
+            <div class="cardContainer">
+                <div class="card" *ngFor="let item of filteredList">
+                  <div class="card">
+                    <div class="rating">{{ item.imdbRating }}</div>
+                    <div class="poster">
+                      <img src={{item.posterurl}} width="250px" height="325px">
+                    </div>
+                    <div class="name">{{ item.title }}</div>
+                    <div class="movietype">{{ item.genres}}</div>
+                  </div>
                 </div>
-
-                <div class="name">{{ item.title }}</div>
-                <div class="movietype">{{ item.genres}}</div>
               </div>
-            </div>
-        </div>
+        
 
-        <div class = "cardContainer" *ngIf="selectedName == 'Action'">
-            <div class="card" *ngFor="let item of movielist">
-                <div class="card">
-                <div class="rating">{{ item.imdbRating }}</div>
-
-                <div class="poster">
-                    <img src={{item.posterurl}} width="250px" height="325px">
-                </div>
-
-                <div class="name">{{ item.title }}</div>
-                <div class="movietype">{{ item.genres}}</div>
-              </div>
-            </div>
-        </div>
+        
     </div>
 </div>
