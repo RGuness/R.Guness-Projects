@@ -16,8 +16,11 @@ export class BodyComponent implements OnInit {
 
   @Input('searchValue2') searchValue2: string;
 
+  @Input() filtered: any[];
+
   listNewReleases: any[];
   filteredList:any [];
+  filteredList2:any [];
 
   movielist:any ;
 
@@ -46,9 +49,9 @@ export class BodyComponent implements OnInit {
 
   showSelected(newMenu: string) {
     this.selectedName = newMenu;
-   
-    this.filteredList = this.movielist.filter(movie => {
-      // console.log(movie);
+  
+    this.filtered = this.movielist.filter(movie => {
+      
       return (movie.genres.includes(newMenu));
     });
   }
@@ -56,14 +59,8 @@ export class BodyComponent implements OnInit {
   displaydata(data){
     this.movielist=data;
   }
-
-  searchdata(search){
-    this.searchValue2=search;
-
-    this.filteredList=this.movielist.filter(movie => {
-      return (movie.name.contains(search));
-    });
-
+            
+   
   }
 
-}
+

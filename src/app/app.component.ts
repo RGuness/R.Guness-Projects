@@ -1,4 +1,5 @@
-import { Component,Input } from '@angular/core';
+import { Component,Input,OnInit } from '@angular/core';
+import {ReadjsonService} from '../app/readjson.service'
 
 @Component({
   selector: 'app-root',
@@ -7,20 +8,50 @@ import { Component,Input } from '@angular/core';
 })
 
 
- 
-
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'movie-app-RGuness';
-    value2=" " ; 
+  value2=" " ; 
+  movielist:any[];
+  filteredList:any[];
+
  
+    constructor(private  readjsonService: ReadjsonService) {
+      this.movielist = [];
+      this.getData();
+    }
+
+    ngOnInit(){
+      this.getData();
+    }
+
   showSelected(event){
     console.log(event);
 
   }
 
   getsearchterm(value){
+    console.log(value);
       this.value2=value ;
+
+      console.log(this.movielist);
+      if (value.length > 0) {
+        this.filteredList = this.movielist.filter(movie => {
+          return (movie.title.toLowerCase().indexOf(value.toLowerCase()) >= 0);
+        });
+      } else {
+    
+        this.filteredList = this.movielist;
+      }
+      
   }
+
+  getData() {
+    this.readjsonService.read_data().subscribe((data: any) => {
+      this.movielist = data;
+    });
+  }
+
+  
 }
 
 

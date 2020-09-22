@@ -1,5 +1,9 @@
 
-<app-header (searchEvent)=getsearchterm($event)></app-header>
+<app-header (sendvalue)=getsearchterm($event)></app-header>
 
-<app-body [searchValue2]="value2"> </app-body>
+<app-body [filtered]="filteredList"> </app-body>
+
+
+
+
 
