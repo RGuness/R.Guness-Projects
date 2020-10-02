@@ -1,5 +1,5 @@
 import { Component, OnInit,Output,EventEmitter } from '@angular/core';
-import {movies} from '../../app/searchbar/movies'
+import {movies} from './movies'
 
 
 @Component({

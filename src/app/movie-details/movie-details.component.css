@@ -1,0 +1,13 @@
+.movie-details {
+    margin: 30px;
+    display: flex;
+    flex-direction: row;
+}
+  
+.contents {
+    margin-left: 30px;
+    display: flex;
+    flex-direction: column;
+}
+  
+  

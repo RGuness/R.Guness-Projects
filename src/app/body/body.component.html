@@ -1,49 +1,32 @@
 <div class="content">
-    <app-left-side-options (newMenuEvent)="showSelected($event)"></app-left-side-options>
+    <app-left-side-options (newMenuEvent)="showSelected($event)" (selectedMenu)="showupcoming($event)"></app-left-side-options>
 
-    <div class="mainbody"> 
-        <p>{{selectedName}}</p>
+  <div class="mainbody"> 
+    
+    <p>{{selectedName}}</p>
+    
+      <div class = "cardContainer" *ngIf="selectedName == 'New Releases'">
+        <div class="card" *ngFor="let item of listNewReleases">
+          <div class="rating"> {{ item.rating }} </div>
+          <div class="poster"> <img src={{item.poster}} width="250px" height="325px"> </div>
+          <div class="name">{{ item.name }}</div>
+          <div class="movietype">{{ item.movietype }}</div>
+        </div>
+      </div>
 
-        <div class = "cardContainer" *ngIf="selectedName == 'New Releases'">
-            <div class="card" *ngFor="let item of listNewReleases">
-                <div class="rating">{{ item.rating }}</div>
-
-                <div class="poster">
-                    <img src={{item.poster}} width="250px" height="325px">
-                </div>
-
-                <div class="name">{{ item.name }}</div>
-                <div class="movietype">{{ item.movietype }}</div>
-              </div>
+      <div class="cardContainer">
+        <div class="card" *ngFor="let item of filtered">
+          <div class="card">
+            <div class="rating">{{ item.imdbRating }}</div>
+            <div class="poster">
+              <a [routerLink] = "['/movieDetails', item.title]"><img src={{item.posterurl}} width="275px" height="350px" (click)="hide()" onerror="this.onerror=null;this.src='../../../assets/posterNotFound.jpg';"></a>
             </div>
+            <div class="name">{{ item.title }}</div>
+            <div class="movietype">{{ item.genres}}</div>
+          </div>
+        </div> 
+      </div>
 
-            <!-- <div class="cardContainer">
-                <div class="card" *ngFor="let item of filteredList">
-                  <div class="card">
-                    <div class="rating">{{ item.imdbRating }}</div>
-                    <div class="poster">
-                      <img src={{item.posterurl}} width="250px" height="325px">
-                    </div>
-                    <div class="name">{{ item.title }}</div>
-                    <div class="movietype">{{ item.genres}}</div>
-                  </div>
-                </div>
-            </div> -->
-
-            <div class="cardContainer">
-                <div class="card" *ngFor="let item of filtered">
-                  <div class="card">
-                    <div class="rating">{{ item.imdbRating }}</div>
-                    <div class="poster">
-                      <img src={{item.posterurl}} width="250px" height="325px">
-                    </div>
-                    <div class="name">{{ item.title }}</div>
-                    <div class="movietype">{{ item.genres}}</div>
-                  </div>
-                </div>
-              </div>
-        
-
-        
+      <router-outlet></router-outlet>
     </div>
 </div>

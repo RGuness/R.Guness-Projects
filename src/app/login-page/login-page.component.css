@@ -1,0 +1,126 @@
+
+.login {
+   /* background: url('../../assets/images/loginimage.jpg') center center no-repeat; */
+
+    bottom: 0;
+    display: flex;
+    flex-direction: row;
+    left: 0;
+    min-height:30%;
+    position: absolute;
+    right: 0;
+    top:0;
+
+    background-size: cover;
+}
+    .login-container {
+      background: #ffffff;
+      padding: 40px;
+      min-width: 4px;
+      position: relative;
+    }
+      .details-container {
+        margin-bottom: 70px;
+    }
+        .details-title {
+          color: #80db56;
+          font-size: 30px;
+          font-weight: 400;
+          margin-bottom: 10px;
+          user-select: none;
+        }
+  
+        .details {
+          color: #222222;
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 16px;
+          opacity: 0.65;
+          width: 200px;
+          user-select: none;
+        }
+      
+  
+      .login-contents {
+        display: flex;
+        flex-direction: column;
+        margin-right: 100px;
+    }
+        .field-row {
+          flex-direction: column;
+          width: 100%;
+          display: flex;
+          margin-bottom: 15px;
+        }
+          .label {
+            margin-bottom: 5px;
+            display: flex;
+            flex-direction: row;
+        }
+            .title {
+              line-height: 16px;
+              font-size: 12px;
+              font-weight: 400;
+              color: #85889b;
+              text-transform: uppercase;
+              margin-bottom: 5px;
+              user-select: none;
+            }
+          
+  
+          .username {
+            background-color: #eeeeee;
+            border-radius: 4px;
+            display: flex;
+            flex-direction: row;
+        }
+            input {
+              width: 100%;
+              background-color: #eeeeee;
+              border: none;
+              border-radius: 4px;
+              padding: 10px;
+              outline: none;
+            }
+          
+  
+          .password {
+            border-radius: 4px;
+            display: flex;
+            flex-direction: row;
+        }
+            input {
+              background-color: #eeeeee;
+              border: none;
+              border-radius: 4px;
+              padding: 10px;
+              outline: none;
+              width: 100%;
+            }
+          
+        .button-container {
+          display: flex;
+          flex-direction: row;
+          margin: 50px 200px 50px 0;
+        }
+          .main-action-button {
+            flex: 1;
+            background-color: #13ad1b;
+            border-radius: 4px;
+            box-shadow: 0 2px 14px 0 rgba(0, 0, 0, 0.12);
+            padding: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            flex-direction: row;
+        }
+            .label {
+              color: #ffffff;
+              font-family: Arial, Helvetica, sans-serif;
+              font-size: 14px;
+              font-weight: 500;
+              user-select: none;
+            }
+
+  

@@ -11,11 +11,24 @@ export class HeaderComponent implements OnInit {
 
    @Output() sendvalue = new EventEmitter <string>();
 
+
+   menus: any[];
+   @Output() selectedMenu = new EventEmitter <number>();
+
+
   popup: boolean;
 
-  constructor() { }
+  constructor() { 
+    this.menus = [{id: 0, name: 'Upcoming Movies'}, {id: 1, name: 'Popular Movies'}];
+    this.selectedMenu = new EventEmitter<number>();
+
+  }
 
   ngOnInit(): void {
+  }
+
+  selectMenu(id: number) {
+    this.selectedMenu.emit(id);
   }
 
   popUpToggle(){
@@ -29,7 +42,15 @@ export class HeaderComponent implements OnInit {
   getsearchterm(value){
     this.sendvalue.emit(value);
   }
- 
-}
+
+  // getapi(apivalue:string){
+  // this.sendvalue.emit(apivalue);
+
+  //     }
+
+  
+  }
+
+
 
 

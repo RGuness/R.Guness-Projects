@@ -1,4 +1,4 @@
-import { Component,Input,OnInit } from '@angular/core';
+import { Component,OnInit } from '@angular/core';
 import {ReadjsonService} from '../app/readjson.service'
 
 @Component({
@@ -10,48 +10,46 @@ import {ReadjsonService} from '../app/readjson.service'
 
 export class AppComponent implements OnInit {
   title = 'movie-app-RGuness';
-  value2=" " ; 
-  movielist:any[];
-  filteredList:any[];
+  // value2=" " ; 
+  // movielist:any[];
+  // filteredList:any[];
 
  
-    constructor(private  readjsonService: ReadjsonService) {
-      this.movielist = [];
-      this.getData();
+    constructor() {
+      //this.movielist = [];
+      //this.getData();
     }
 
     ngOnInit(){
-      this.getData();
+      //this.getData();
     }
 
-  showSelected(event){
-    console.log(event);
+  // showSelected(event){
+  //   console.log(event);
 
-  }
+  // }
 
-  getsearchterm(value){
-    console.log(value);
-      this.value2=value ;
+  // getsearchterm(value){
+  //   console.log(value);
+  //     this.value2=value ;
 
-      console.log(this.movielist);
-      if (value.length > 0) {
-        this.filteredList = this.movielist.filter(movie => {
-          return (movie.title.toLowerCase().indexOf(value.toLowerCase()) >= 0);
-        });
-      } else {
+  //     console.log(this.movielist);
+  //     if (value.length > 0) {
+  //       this.filteredList = this.movielist.filter(movie => {
+  //         return (movie.title.toLowerCase().indexOf(value.toLowerCase()) >= 0);
+  //       });
+  //     } else {
     
-        this.filteredList = this.movielist;
-      }
-      
-  }
+  //       this.filteredList = this.movielist;
+  //     }
+  // }
 
-  getData() {
-    this.readjsonService.read_data().subscribe((data: any) => {
-      this.movielist = data;
-    });
-  }
-
-  
+  // //GET FROM JSON FILE
+  // getData() {
+  //   this.readjsonService.read_data().subscribe((data: any) => {
+  //     this.movielist = data;
+  //   });
+  // }
 }
 
 
